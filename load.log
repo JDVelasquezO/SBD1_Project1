@@ -1,0 +1,244 @@
+
+SQL*Loader: Release 18.0.0.0.0 - Production on Dom Sep 12 14:34:22 2021
+Version 18.4.0.0.0
+
+Copyright (c) 1982, 2019, Oracle and/or its affiliates.  All rights reserved.
+
+Archivo de Control:   load.ctl
+Archivo de Datos:      BlockbusterData.csv
+  Archivo de Errores:     BlockbusterData.bad
+  Desechar Archivo:  ninguno especificado
+ 
+ (Permitir todos los registros desechados)
+
+Número a cargar: ALL
+Número que omitir: 1
+Errores permitidos: 50
+Matriz de enlace:     250 filas, máximo de 1048576 bytes
+Continuación:    ninguno especificado
+Ruta de acceso utilizada:      Convencional
+
+Tabla TEMP, cargada de cada registro lógico.
+Opción INSERT activa para esta tabla: INSERT
+
+   Nombre Columna                  Posición   Long  Term Entorno Tipo de Dato
+------------------------------ ---------- ----- ---- ---- ---------------------
+NOMBRE_CLIENTE                      FIRST     *   ;       CHARACTER            
+CORREO_CLIENTE                       NEXT     *   ;       CHARACTER            
+CLIENTE_ACTIVO                       NEXT     *   ;       CHARACTER            
+FECHA_CREACION                       NEXT     *   ;       CHARACTER            
+TIENDA_PREFERIDA                     NEXT     *   ;       CHARACTER            
+DIRECCION_CLIENTE                    NEXT     *   ;       CHARACTER            
+CODIGO_POSTAL_CLIENTE                NEXT     *   ;       CHARACTER            
+CIUDAD_CLIENTE                       NEXT     *   ;       CHARACTER            
+PAIS_CLIENTE                         NEXT     *   ;       CHARACTER            
+FECHA_RENTA                          NEXT     *   ;       CHARACTER            
+FECHA_RETORNO                        NEXT     *   ;       CHARACTER            
+MONTO_A_PAGAR                        NEXT     *   ;       CHARACTER            
+FECHA_PAGO                           NEXT     *   ;       CHARACTER            
+NOMBRE_EMPLEADO                      NEXT     *   ;       CHARACTER            
+CORREO_EMPLEADO                      NEXT     *   ;       CHARACTER            
+EMPLEADO_ACTIVO                      NEXT     *   ;       CHARACTER            
+TIENDA_EMPLEADO                      NEXT     *   ;       CHARACTER            
+USUARIO_EMPLEADO                     NEXT     *   ;       CHARACTER            
+CONTRASENA_EMPLEADO                  NEXT     *   ;       CHARACTER            
+DIRECCION_EMPLEADO                   NEXT     *   ;       CHARACTER            
+CODIGO_POSTAL_EMPLEADO               NEXT     *   ;       CHARACTER            
+CIUDAD_EMPLEADO                      NEXT     *   ;       CHARACTER            
+PAIS_EMPLEADO                        NEXT     *   ;       CHARACTER            
+NOMBRE_TIENDA                        NEXT     *   ;       CHARACTER            
+ENCARGADO_TIENDA                     NEXT     *   ;       CHARACTER            
+DIRECCION_TIENDA                     NEXT     *   ;       CHARACTER            
+CODIGO_POSTAL_TIENDA                 NEXT     *   ;       CHARACTER            
+CIUDAD_TIENDA                        NEXT     *   ;       CHARACTER            
+PAIS_TIENDA                          NEXT     *   ;       CHARACTER            
+TIENDA_PELICULA                      NEXT     *   ;       CHARACTER            
+NOMBRE_PELICULA                      NEXT     *   ;       CHARACTER            
+DESCRIPCION_PELICULA                 NEXT     *   ;       CHARACTER            
+ANO_LANZAMIENTO                      NEXT     *   ;       CHARACTER            
+DIAS_RENTA                           NEXT     *   ;       CHARACTER            
+COSTO_RENTA                          NEXT     *   ;       CHARACTER            
+DURACION                             NEXT     *   ;       CHARACTER            
+COSTO_POR_DANO                       NEXT     *   ;       CHARACTER            
+CLASIFICACION                        NEXT     *   ;       CHARACTER            
+LENGUAJE_PELICULA                    NEXT     *   ;       CHARACTER            
+CATEGORIA_PELICULA                   NEXT     *   ;       CHARACTER            
+ACTOR_PELICULA                       NEXT     *   ;       CHARACTER            
+
+el valor utilizado para el parámetro ROWS ha cambiado de 250 a 99
+Registro 5: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 105, máximo: 100)
+
+Registro 6: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 105, máximo: 100)
+
+Registro 7: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 105, máximo: 100)
+
+Registro 8: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 105, máximo: 100)
+
+Registro 9: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 105, máximo: 100)
+
+Registro 28: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 104, máximo: 100)
+
+Registro 29: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 104, máximo: 100)
+
+Registro 30: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 104, máximo: 100)
+
+Registro 31: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 104, máximo: 100)
+
+Registro 32: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 104, máximo: 100)
+
+Registro 33: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 104, máximo: 100)
+
+Registro 48: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 49: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 50: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 51: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 52: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 78: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 120, máximo: 100)
+
+Registro 79: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 120, máximo: 100)
+
+Registro 80: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 120, máximo: 100)
+
+Registro 81: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 120, máximo: 100)
+
+Registro 82: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 120, máximo: 100)
+
+Registro 83: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 120, máximo: 100)
+
+Registro 84: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 102, máximo: 100)
+
+Registro 85: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 102, máximo: 100)
+
+Registro 86: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 102, máximo: 100)
+
+Registro 87: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 102, máximo: 100)
+
+Registro 88: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 102, máximo: 100)
+
+Registro 93: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 94: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 95: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 96: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 97: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 98: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 99: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 100: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 101: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 103, máximo: 100)
+
+Registro 108: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 109: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 110: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 111: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 112: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 123: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 124: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 125: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 126: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 127: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 128: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 129: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 130: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 131: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 111, máximo: 100)
+
+Registro 135: Rechazado - Error en tabla TEMP, columna DESCRIPCION_PELICULA.
+ORA-12899: el valor es demasiado grande para la columna "TEST"."TEMP"."DESCRIPCION_PELICULA" (real: 109, máximo: 100)
+
+
+MÁXIMO DE ERRORES EXCEDIDO - Las estadísticas anteriores reflejan una ejecución parcial.
+
+Tabla TEMP:
+  84 Filas cargadas correctamente.
+  51 Filas no cargadas debido a errores de datos.
+  0 Filas no cargadas porque todas las cláusulas WHEN han fallado.
+  0 Filas no cargadas porque todos los campos eran nulos.
+
+
+Espacio asignado a matriz de enlace:          1047222 bytes (99 filas)
+Bytes de buffer de lectura: 1048576
+
+Total de registros lógicos omitidos:          1
+Total de registros lógicos leídos:         198
+Total de registros lógicos rechazados:        51
+Total de registros lógicos desechados:        0
+
+La ejecución empezó en Dom Sep 12 14:34:22 2021
+La ejecución terminó en Dom Sep 12 14:34:22 2021
+
+Tiempo transcurrido:     00:00:00.35
+Tiempo de CPU:         00:00:00.17
