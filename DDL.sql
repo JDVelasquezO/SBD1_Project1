@@ -1,5 +1,18 @@
+-- RESET INDENTITY
+-- ALTER TABLE USER_STORE MODIFY(CODE_USER Generated as Identity (START WITH 1));
+
+-- SEARCH DUPLICATES
+-- SELECT COL_A_COMPROBAR, COUNT(COL_A_COMPROBAR)
+-- FROM NOMBRE_TABLA
+-- GROUP BY COL_A_COMPROBAR
+-- HAVING COUNT(COL_A_COMPROBAR) > 1
+
+-- CREATE SCHEMA
+ALTER SESSION SET " ORACLE SCRIPT"=true;
+CREATE USER TEST IDENTIFIED BY 1234;
+GRANT dba to TEST;
+
 -- temp
-DROP TABLE Temp;
 CREATE TABLE TEMP(
 NOMBRE_CLIENTE VARCHAR2(150),
 CORREO_CLIENTE VARCHAR2(150),
@@ -43,11 +56,6 @@ LENGUAJE_PELICULA VARCHAR2(150),
 CATEGORIA_PELICULA VARCHAR2(150),
 ACTOR_PELICULA VARCHAR2(150)
 );
-
--- CREATE SCHEMA
-ALTER SESSION SET " ORACLE SCRIPT"=true;
-CREATE USER TEST IDENTIFIED BY 1234;
-GRANT dba to TEST;
 
 -- DDL
 CREATE TABLE role (
@@ -144,17 +152,17 @@ CREATE TABLE category (
 );
 
 CREATE TABLE movie (
-    cod_movie NUMBER(3) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) 
+    cod_movie NUMBER(4) GENERATED ALWAYS AS IDENTITY(START WITH 1 INCREMENT BY 1) 
         CONSTRAINT pk_movie PRIMARY KEY,
 
-    title_movie VARCHAR2(20) CONSTRAINT nn_title NOT NULL,
+    title_movie VARCHAR2(50) CONSTRAINT nn_title NOT NULL,
 
-    desc_movie VARCHAR2(20) CONSTRAINT nn_desc NOT NULL,
+    desc_movie VARCHAR2(150) CONSTRAINT nn_desc NOT NULL,
 
     release_year NUMBER(5) CONSTRAINT nn_releaseYear NOT NULL
                    CONSTRAINT chk_releareYear CHECK ( release_year>1900 ),
 
-    duration NUMBER(2) CONSTRAINT nn_duration NOT NULL
+    duration NUMBER(3) CONSTRAINT nn_duration NOT NULL
                    CONSTRAINT chk_duration CHECK ( duration>0 ),
 
     cant_max_days NUMBER(2) CONSTRAINT nn_cant_max_days NOT NULL
@@ -170,17 +178,17 @@ CREATE TABLE movie (
 );
 
 CREATE TABLE mov_lang (
-    fk_cod_mov NUMBER(3),
+    fk_cod_mov NUMBER(4),
     CONSTRAINT fk_codMovie FOREIGN KEY (fk_cod_mov) REFERENCES MOVIE(COD_MOVIE),
 
-    fk_cod_category NUMBER(3),
-    CONSTRAINT fk_codCategory FOREIGN KEY (fk_cod_category) REFERENCES CATEGORY(COD_CATEGORY),
+    fk_cod_lang NUMBER(3),
+    CONSTRAINT fk_codCategory FOREIGN KEY (fk_cod_lang) REFERENCES CATEGORY(COD_CATEGORY),
 
-    CONSTRAINT pk_movLang PRIMARY KEY (fk_cod_category, fk_cod_mov)
+    CONSTRAINT pk_movLang PRIMARY KEY (fk_cod_lang, fk_cod_mov)
 );
 
 CREATE TABLE mov_act (
-    fk_cod_mov NUMBER(3),
+    fk_cod_mov NUMBER(4),
     CONSTRAINT fk_codMovieAct FOREIGN KEY (fk_cod_mov) REFERENCES MOVIE(COD_MOVIE),
 
     fk_cod_actor NUMBER(3),
@@ -190,7 +198,7 @@ CREATE TABLE mov_act (
 );
 
 CREATE TABLE mov_category (
-    fk_cod_mov NUMBER(3),
+    fk_cod_mov NUMBER(4),
     CONSTRAINT fk_codMovieCat FOREIGN KEY (fk_cod_mov) REFERENCES MOVIE(COD_MOVIE),
 
     mov_category NUMBER(3),
@@ -200,14 +208,14 @@ CREATE TABLE mov_category (
 );
 
 CREATE TABLE rent (
-    pay_date DATE,
+    pay_date TIMESTAMP,
 
-    rent_date DATE,
+    rent_date TIMESTAMP,
 
-    delivery_date DATE CONSTRAINT nn_deliveryDate NOT NULL,
+    delivery_date TIMESTAMP,
 
     amount_pay NUMBER(8,2) CONSTRAINT nn_amounPay NOT NULL
-                  CONSTRAINT chk_amountPay CHECK ( amount_pay>0 ),
+                  CONSTRAINT chk_amountPay CHECK ( amount_pay>=0 ),
 
     fk_idClient NUMBER(3) CONSTRAINT nn_FkIdClient NOT NULL,
     CONSTRAINT fk_idClientRent FOREIGN KEY (fk_idClient)
@@ -217,18 +225,19 @@ CREATE TABLE rent (
     CONSTRAINT fk_idWorkerRent FOREIGN KEY (fk_idWorker)
         REFERENCES USER_STORE(CODE_USER),
 
-    fk_idMovie NUMBER(3) CONSTRAINT nn_FkIdMovie NOT NULL,
+    fk_idMovie NUMBER(4) CONSTRAINT nn_FkIdMovie NOT NULL,
     CONSTRAINT fk_idMovieRent FOREIGN KEY (fk_idMovie)
         REFERENCES MOVIE(COD_MOVIE),
 
-    CONSTRAINT pk_rent PRIMARY KEY (pay_date, rent_date)
+    CONSTRAINT pk_rent 
+        PRIMARY KEY (pay_date, rent_date, DELIVERY_DATE, FK_IDCLIENT, FK_IDWORKER, FK_IDMOVIE)
 );
 
 CREATE TABLE inventory (
     cod_store NUMBER(3),
     CONSTRAINT fk_codStoreInv FOREIGN KEY (cod_store) REFERENCES STORE(COD_STORE),
 
-    cod_movie NUMBER(3),
+    cod_movie NUMBER(4),
     CONSTRAINT fk_codMovInv FOREIGN KEY (cod_movie) REFERENCES MOVIE(COD_MOVIE),
 
     quantity NUMBER(10) CONSTRAINT nn_quantity NOT NULL,
